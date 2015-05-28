@@ -74,7 +74,7 @@ NSDictionary *formEncodedDataToDictionary(NSData *data);
                               [NSString stringWithFormat:@"https://www.tumblr.com/oauth/authorize?oauth_token=%@",
                                responseParameters[@"oauth_token"]]];
             
-            [[NSWorkspace sharedWorkspace] openURL:authURL];
+            [[UIApplication sharedApplication] openURL:authURL];
             
         } else {
             if (callback) {
